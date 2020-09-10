@@ -1,0 +1,237 @@
+﻿body {
+    background-color: rgb(217,217,217);
+    font-family: 'KtavYadCLM-MediumItalic';
+}
+/*סימניות*/
+.link {
+    font-family: verdana, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top: -10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#btn1 {
+    top: 100px;
+    z-index: 100;
+}
+
+#btn2 {
+    top: 200px;
+    z-index: 100;
+}
+
+#btn3 {
+    top: 300px;
+    z-index: 100;
+}
+
+div.button {
+    background-color: #ffa5009e;
+    color: #ffa601b3;
+    border: none;
+    border-radius: 30px;
+    width: 500px;
+    height: 60px;
+    position: fixed;
+    right: -435px;
+    transition: .7s ease;
+}
+
+    div.button:hover {
+        background-color: white;
+        position: fixed;
+        right: -50px;
+        width: 400px;
+        border-radius: 30px;
+        box-shadow: 10px 15px 20px #ffa5009e;
+    }
+
+    div.button:active {
+        background-color: #ffa5009e;
+        transition: 0s;
+        color: #ecf0f1;
+    }
+
+@font-face {
+    font-family: 'KtavYadCLM-MediumItalic';
+    src: url('../pictere/KtavYadCLM-MediumItalic.ttf') format('truetype');
+}
+
+img {
+    width: 7%;
+    height: 7%;
+}
+
+.rotate {
+    opacity: 0.7;
+    animation: transform 1s infinite alternate;
+}
+
+@keyframes transform {
+    from {
+        transform: rotate(-50deg);
+    }
+
+    to {
+        transform: rotate(50deg);
+    }
+}
+
+#img5 {
+    margin: 0vh 11vw 0vh 0vw;
+}
+
+#img4 {
+    margin: 44vh 13vw 0vh 29vw;
+}
+
+#img2 {
+    margin: 2vh 11vw 0vh 0vw;
+}
+
+#img1 {
+    margin: 10vh 13vw 0vh 29vw;
+}
+
+p {
+    direction: rtl;
+    border-top: solid;
+    font-size: 1.5vw;
+    color: rgb(3,152,159);
+    text-align: center;
+    border-bottom: solid;
+    border-radius: 3vw;
+    width: 59vw;
+    height: 35vh;
+    position: absolute;
+    top: 27%;
+    right: 19%;
+}
+
+#toknow {
+    font-size: 2.5vw;
+    color: orange;
+    text-shadow: 1px 2px 6px rgb(3,152,159);
+}
+
+@media screen and (max-width: 767px) and (min-width: 481px) {
+    #img1 {
+        margin: 19vh 13vw 0vh 29vw;
+    }
+
+    #toknow {
+        font-size: 4.5vw;
+    }
+
+    p {
+        font-size: 2.8vw;
+    }
+    #btn1 {
+        top: 258px;
+    }
+
+    #btn2 {
+        top: 326px;
+    }
+
+    #btn3 {
+        top: 393px;
+    }
+
+    div.button {
+        width: 493px;
+        height: 43px;
+    }
+
+    .link {
+        font-size: 3.4vw;
+    }
+
+    div.button:hover {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 992px) {
+    #img1 {
+        margin: 16vh 13vw 0vh 29vw;
+    }
+
+    p {
+        font-size: 2.3vw;
+    }
+
+    #toknow {
+        font-size: 3.5vw;
+    }
+
+    #btn1 {
+        top: 258px;
+    }
+
+    #btn2 {
+        top: 326px;
+    }
+
+    #btn3 {
+        top: 393px;
+    }
+
+    div.button {
+        width: 493px;
+        height: 43px;
+    }
+
+    .link {
+        font-size: 2.4vw;
+    }
+
+    div.button:hover {
+        width: 300px;
+    }
+}
+
+
+
+@media screen and (max-width: 480px) and (min-width: 320px) {
+    #img1 {
+        margin: 20vh 13vw 0vh 29vw;
+    }
+
+    p {
+        font-size: 3.5vw;
+    }
+
+    #toknow {
+        font-size: 7.5vw;
+    }
+    #btn1 {
+        top: 258px;
+    }
+
+    #btn2 {
+        top: 326px;
+    }
+
+    #btn3 {
+        top: 393px;
+    }
+
+    div.button {
+        width: 474px;
+        height: 27px;
+    }
+
+    .link {
+        font-size: 3.4vw;
+    }
+
+    div.button:hover {
+        width: 230px;
+    }
+}

@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="../css/towers.css" rel="stylesheet" />
+    <script src="../js/towers.js"></script>
+</head>
+<body onload="func1()">
+    <a href="home.html" onclick="stop()">
+        <div id="btn1" class="button">
+            <h1 class="link">HOME</h1>
+        </div>
+    </a>
+    <a onclick="level(numlevel),stop()">
+        <div id="btn2" class="button">
+            <h1 class="link">NEW GAME</h1>
+        </div>
+    </a>
+
+    <a href="about.html" onclick="stop()">
+        <div id="btn3" class="button">
+            <h1 class="link">ABOUT</h1>
+        </div>
+    </a>
+    <lable>מגדלי האנוי</lable>
+    <article>
+        <div id="wrapper_div">
+            <ul id="tower-3" class="tower"></ul>
+            <ul id="tower-2" class="tower"></ul>
+            <ul id="tower-1" class="tower"></ul>
+        </div>
+    </article>
+    <section id="section">
+        <div class="level">
+            <label onclick="level(3)" class="lev" id="lev1">קל</label>
+            <div class="checkboxOut">
+                <div class="checkboxIn" onclick="level(3)"></div>
+            </div>
+        </div>
+        <div class="level">
+            <label onclick="level(5)" class="lev" id="lev2">בינוני</label>
+            <div class="checkboxOut"><div class="checkboxIn" onclick="level(5)"></div></div>
+        </div>
+        <div class="level">
+            <label onclick="level(7)" class="lev" id="lev3">קשה</label>
+            <div class="checkboxOut"><div class="checkboxIn" onclick="level(7)"></div></div>
+        </div>
+        <p id="win">you won!</p>
+    </section>
+    <footer>
+        <label id="instra"><img onclick="instraction()" id="close" class="pics closed" src="../pictere/tower/close.png" />הוראות</label>
+        <p id="ins">
+            מטרת המשחק היא להעביר את כל הדיסקיות מהמוט הראשון<br /> אל המוט השלישי,
+            <br />
+            על פי הכללים הבאים:
+            <br /> 1.מותר להזיז רק דיסקית אחת בכל פעם - מראש מוט אחד לראש מוט אחר.
+            <br /> 2.אסור להניח דיסקית על דיסקית שקטנה ממנה.
+            <br />בהצלחה!!!
+        </p>
+        <img id="back" class="pic" onclick="instraction()" src="../pictere/tower/help.png" />
+        <img id="in" class="pic" onclick="level(numlevel)" src="../pictere/tower/restart.png" />
+    </footer>
+</body>
+</html>

@@ -1,0 +1,327 @@
+﻿body {direction: rtl;
+    background-color: rgb(217,217,217);
+    
+}
+@font-face {
+    font-family: 'KtavYadCLM-MediumItalic';
+    src: url('../pictere/KtavYadCLM-MediumItalic.ttf') format('truetype');
+}
+#startt {
+    width: 38vw;
+    background-color: gray;
+    position: absolute;
+    right: 20%;
+    top: 23%;
+    height: 48vh;
+    box-shadow: -2px -1px 25px 14px rgb(116, 169, 172);
+    border-radius: 5vw;  
+    display:block;
+}
+#startb {
+    /* top: 10%; */
+    margin-top: 26%;
+    /* margin-left: 21%; */
+    margin-right: 19%;
+    position: absolute;
+    color: rgb(5,160,167);
+    font-size: 6vh;
+    font-family: 'Arial Rounded MT';
+}
+#picture {
+    width: 38vw;
+    position: absolute;
+    right: 20%;
+    top: 23%;
+    height: 48vh;
+    box-shadow: -2px -1px 25px 14px rgb(116, 169, 172);
+    border-radius: 5vw;
+}
+.pic {
+    width: 100%;
+    height: 100%;
+    border-radius: 5vw;
+}
+#riddle {
+    position: absolute;
+    top: -30%;
+    color: rgb(5,160,167);
+    right: 11%;
+    text-shadow: 7px 1px 20px rgb(116, 169, 172);
+    font-size: 13vw;
+    font-family: calibri;
+}
+#bulb {
+    position: absolute;
+    top: 1%;
+    right: 27%;
+    width: 201px;
+}
+.bulbl:hover {
+    cursor: pointer;
+}
+#rightarrow{
+    position: absolute;
+    top: 40%;
+    right: 10%;
+}
+#leftarrow {
+    position: absolute;
+    top: 40%;
+    left: 32%;
+    transform: rotateY(180deg);
+}
+#question {
+    position: absolute;
+    bottom: 7%;
+    text-align: center;
+    right: 19%;
+    font-size: 4vh;
+   font-family: 'KtavYadCLM-MediumItalic';
+    animation: enterance linear 0.8s alternate;
+    display: none;
+}
+#answer {
+    position: absolute;
+    top: 27%;
+    left: 3%;
+    font-size: 1.2vw;
+  font-family: 'KtavYadCLM-MediumItalic';
+}
+#apostrophe{
+           transform: rotate3d(-2, -3, 25, 180deg);
+    top: 103%;
+    left: 37%;
+    position: absolute;
+}
+.apostrophes{
+    opacity:0.7;
+}
+
+div.button {
+    background-color: #00959c;
+    color: #00959cb8;
+    border: none;
+    border-radius: 30px;
+    width: 500px;
+    height: 60px;
+    position: fixed;
+    right: -435px;
+    transition: .7s ease;
+}
+.link {
+    font-family: verdana, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top: -10px;
+}
+#btn1 {
+    top: 100px;
+    z-index: 100;
+}
+#btn2 {
+    top: 200px;
+    z-index: 100;
+}
+#btn3 {
+    top: 300px;
+    z-index: 100;
+}
+div.button:hover {
+    background-color: #ffffff;
+    position: fixed;
+    right: -50px;
+    width: 400px;
+    border-radius: 30px;
+    box-shadow: 10px 15px 20px#00959c;
+}
+
+div.button:active {
+    background-color: #00959c;
+    transition: 0s;
+    color: #ecf0f1;
+}
+.show {
+    display: block;
+    -webkit-animation: enterance linear 0.8s alternate; /* Chrome, Safari, Opera */
+    animation: enterance linear 0.8s alternate;
+}
+
+@media screen and (max-width: 767px) and (min-width: 481px) {
+    #picture {
+        width: 44vw;
+        position: absolute;
+        right: 17%;
+        top: 30%;
+        height: 33vh;
+        box-shadow: -2px -1px 25px 14px rgb(116, 169, 172);
+        border-radius: 5vw;
+    }
+    #rightarrow {
+        position: absolute;
+        top: 39%;
+        right: 5%;
+        height: 15%;
+        width: 14%;
+    }
+    #leftarrow {
+        position: absolute;
+        top: 39%;
+        left: 27%;
+        height: 15%;
+        width: 14%;
+    }
+    #answer {
+        position: absolute;
+        top: 27%;
+        left: 2%;
+        font-size: 2vw;
+        font-family: BampiRegular;
+    }
+    #riddle {
+        position: absolute;
+        top: -11%;
+        color: rgb(5,160,167);
+        right: 11%;
+        text-shadow: 7px 1px 20px rgb(116, 169, 172);
+        font-size: 15vw;
+        font-family:Calibri;
+    }
+    #bulb {
+        position: absolute;
+        top: 1%;
+        right: 27%;
+        width: 138px;
+    }
+    div.button {
+        background-color: #00959c;
+        color: #00959cb8;
+        border: none;
+        border-radius: 30px;
+        width: 500px;
+        height: 46px;
+        position: fixed;
+        right: -435px;
+        transition: .7s ease;
+    }
+    #question {
+        position: absolute;
+        bottom: 17%;
+        text-align: center;
+        right: 16%;
+        font-size: 3vw;
+        font-family: 'Ktav Yad CLM MediumItalic';
+        animation: enterance linear 0.8s alternate;
+    }
+    #btn1 {
+        top: 100px;
+        z-index: 100;
+    }
+
+}
+
+
+
+
+@media screen and (max-width: 1199px) and (min-width: 992px) {
+    #riddle {
+        top: -26%;
+        right: 8%;
+    }
+
+    #question {
+        position: absolute;
+        bottom: 4%;
+        text-align: center;
+        right: 12%;
+        font-size: 3vw;
+        font-family: 'Ktav Yad CLM MediumItalic';
+        animation: enterance linear 0.8s alternate;
+    }
+    #btn1 {
+        top: 100px;
+        z-index: 100;
+    }
+    #rightarrow {
+        position: absolute;
+        top: 39%;
+        right: 5%;
+        height: 15%;
+        width: 14%;
+    }
+    #leftarrow {
+        position: absolute;
+        top: 39%;
+        left: 27%;
+        height: 15%;
+        width: 14%;
+    }
+    #bulb {
+        position: absolute;
+        top: 1%;
+        right: 26%;
+        width: 159px;
+    }
+
+}
+
+
+
+@media screen and (max-width: 480px) and (min-width: 320px) {
+
+    #picture {
+        width: 67vw;
+        position: absolute;
+        right: 17%;
+        top: 24%;
+        height: 31vh;
+        box-shadow: -2px -1px 25px 14px rgb(116, 169, 172);
+        border-radius: 5vw;
+    }
+    #rightarrow {
+        position: absolute;
+        top: 36%;
+        right: 7%;
+        height: 10%;
+        width: 12%;
+    }
+    #leftarrow {
+        position: absolute;
+        top: 36%;
+        left: 6%;
+        height: 10%;
+        width: 12%;
+    }
+    #riddle {
+        top: -1%;
+        right: 16%;
+    }
+    #bulb {
+        position: absolute;
+        top: 6%;
+        right: 29%;
+        width: 90px;
+    }
+    #answer {
+        position: absolute;
+        top: 75%;
+        left: 5%;
+        font-size: 3vw;
+        font-family: BampiRegular;
+    }
+    .apostrophes {
+        opacity: 0.7;
+        width: 13%;
+    }
+    #question {
+        position: absolute;
+        bottom: 31%;
+        text-align: center;
+        right: 20%;
+        font-size: 3vw;
+        font-family: 'Ktav Yad CLM MediumItalic';
+        animation: enterance linear 0.8s alternate;
+    }
+}
+
+

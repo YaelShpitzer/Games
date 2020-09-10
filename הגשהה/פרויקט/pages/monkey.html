@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="../css/monkey.css" rel="stylesheet" />
+    <script src="../js/monkey.js"></script>
+    <meta charset="utf-8" />
+    <title> monkey</title>
+    <script src="../js/confetti.js"></script>
+    <link href="../css/confetti.css" rel="stylesheet" />
+</head>
+<body onload="s(),help()">
+    <canvas id="confetti"></canvas>
+    <div id="party-info">
+        <img onclick="restart()" id="reset" src="../pictere/monkey/restart.png" />
+        You Did It!!
+    </div>
+    <p id="steps">  &nbsp; :מהלכים</p>
+    <p id="cnt"></p>
+
+    <img id="ht" src="../pictere/monkey/head & tail.png" draggable="false" />
+
+    <img id="saviv" src="../pictere/monkey/b.png" draggable="false" />
+    <img id="saviv1" src="../pictere/monkey/p.png" draggable="false" />
+    <img id="saviv2" src="../pictere/monkey/o.png" draggable="false" />
+    <img id="saviv3" src="../pictere/monkey/y.png" draggable="false" />
+    <img id="saviv4" src="../pictere/monkey/o.png" draggable="false" />
+    <img id="saviv5" src="../pictere/monkey/y.png" draggable="false" />
+    <img id="saviv6" src="../pictere/monkey/y.png" draggable="false" />
+    <img id="saviv7" src="../pictere/monkey/o.png" draggable="false" />
+
+    <div id="board">
+        <div id="00" class=square ondrop="drop(event)" ondragover="allowDrop(event) "></div>
+        <div id="01" class=square ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div id="02" class=square ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div id="10" class=square ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div id="11" class=square ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div id="12" class=square ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div id="20" class=square ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div id="21" class=square ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div id="22" class=square ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    </div>
+    <div id="sentence">
+        הקופים השובבים השתוללו בג'ונגל<br />
+        ?מי יעזור להם להתאים ראש לזנב
+    </div>
+
+    <div id="tab">
+        <div class="divtab" ondrop="drop(event)" ondragover="allowDrop(event) ">
+            <img src="../pictere/monkey/1.jpg" id="1" class="pic  rotater" onclick="rotate(this)" draggable="true" ondragstart="drag(event)"
+                 data-left="head blue" data-top="head yellow" data-right="legs orange" data-bottom="head pink" />
+        </div>
+
+
+        <div class="divtab" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img src="../pictere/monkey/2.jpg" id="2" class="pic rotater" onclick="rotate(this)" draggable="true" ondragstart="drag(event)"
+                 data-left="head yellow" data-top="head orange" data-right="legs pink" data-bottom="legs orange" />
+        </div>
+
+        <div class="divtab" ondrop="drop(event)" ondragover="allowDrop(event) ">
+            <img src="../pictere/monkey/3.jpg" id="3" class="pic rotater" onclick="rotate(this)" draggable="true" ondragstart="drag(event)"
+                 data-left="legs pink" data-top="head orange" data-right="head yellow" data-bottom="legs blue" />
+        </div>
+
+
+        <div class="divtab" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img src="../pictere/monkey/4.jpg" id="4" class="pic rotater" onclick="rotate(this)" draggable="true" ondragstart="drag(event)"
+                 data-left="legs orange" data-top="head pink" data-right="legs blue" data-bottom="head pink" />
+        </div>
+
+        <div class="divtab" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img src="../pictere/monkey/5.jpg" id="5" class="pic rotater" onclick="rotate(this)" draggable="true" ondragstart="drag(event)"
+                 data-left="head pink" data-top="legs pink" data-right="legs orange" data-bottom="head blue" />
+        </div>
+
+        <div class="divtab" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img src="../pictere/monkey/6.jpg" id="6" class="pic rotater" onclick="rotate(this)" draggable="true" ondragstart="drag(event)"
+                 data-left="head blue" data-top="legs yellow" data-right="legs pink" data-bottom="legs yellow" />
+        </div>
+
+        <div class="divtab" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img src="../pictere/monkey/7.jpg" id="7" class="pic rotater" onclick="rotate(this)" draggable="true" ondragstart="drag(event)"
+                 data-left="legs yellow" data-top="legs blue" data-right="head yellow" data-bottom="legs blue" />
+        </div>
+        <div class="divtab" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img src="../pictere/monkey/8.jpg" id="8" class="pic rotater" onclick="rotate(this)" draggable="true" ondragstart="drag(event)"
+                 data-left="legs blue" data-top="legs yellow" data-right="head blue" data-bottom="head orange" />
+        </div>
+
+        <div class="divtab" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img src="../pictere/monkey/9.jpg" id="9" class="pic rotater" onclick="rotate(this)" draggable="true" ondragstart="drag(event)"
+                 data-left="head orange" data-top="head orange" data-right="legs yellow" data-bottom="head pink" />
+        </div>
+
+    </div>
+
+    <div id="instructionss">
+        <label id="instra" style="display: block; "><img onclick="instraction()" id="close" class="pics closed" src="../pictere/monkey/close.png">הוראות</label>
+        <p id="ins" style="display: block; ">
+            מטרת המשחק היא לחבר את ראשו של הקוף לזנבו<br> כך שיווצר ריבוע המורכב מכל תשעת הכרטיסים,
+            <br>
+          ובו מופיע הקוף 12 פעמים בשלמותו.
+        </p>
+    </div>
+
+
+
+    <!--סימניות בצד-->
+    <a href="home.html">
+        <div id="btn1" class="button">
+            <h1 class="link">HOME</h1>
+        </div>
+    </a>
+
+    <a onclick="instraction()">
+        <div id="btn2" class="button">
+            <h1 class="link">INSTRUCTIONS</h1>
+        </div>
+    </a>
+
+    <a onclick="prints()">
+        <div id="btn3" class="button">
+            <h1 class="link">PRINT</h1>
+        </div>
+    </a>
+
+    <!--<img id="restart" src="restart.png" onclick="reset()"/>-->
+</body>
+</html>

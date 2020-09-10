@@ -1,0 +1,581 @@
+﻿body {
+    background-color: rgb(217,217,217);
+    font-family: 'KtavYadCLM-MediumItalic';
+}
+
+@font-face {
+    font-family: 'KtavYadCLM-MediumItalic';
+    src: url('../pictere/KtavYadCLM-MediumItalic.ttf') format('truetype');
+}
+
+.link {
+    font-family: verdana, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top: -10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#btn1 {
+    top: 100px;
+    z-index: 100;
+}
+
+#btn2 {
+    top: 200px;
+    z-index: 100;
+}
+
+#btn3 {
+    top: 300px;
+    z-index: 100;
+}
+
+div.button {
+    background-color: #00959c;
+    color: #00959cb8;
+    border: none;
+    border-radius: 30px;
+    width: 500px;
+    height: 60px;
+    position: fixed;
+    right: -435px;
+    transition: .7s ease;
+}
+
+    div.button:hover {
+        background-color: #ffffff;
+        position: fixed;
+        right: -50px;
+        width: 400px;
+        border-radius: 30px;
+        box-shadow: 10px 15px 20px#00959c;
+    }
+
+    div.button:active {
+        background-color: #00959c;
+        transition: 0s;
+        color: #ecf0f1;
+    }
+
+.disk {
+    height: 2vw;
+    border-radius: 19px;
+    margin: auto;
+}
+
+#disk1 {
+    background-color: rgb(255,162,36);
+    width: 4.5vw;
+    box-shadow: 5px 5px 5px 5px rgb(255,124,7) inset;
+}
+
+#disk2 {
+    background-color: rgb(0,149,156);
+    width: 6.5vw;
+    box-shadow: 5px 5px 5px 5px rgb(0,112,156) inset;
+}
+
+#disk3 {
+    background-color: rgb(191,191,191);
+    width: 8.5vw;
+    box-shadow: 5px 5px 5px 5px rgb(112,106,106) inset;
+}
+
+#disk4 {
+    background-color: #49bf56;
+    width: 10.5vw;
+    box-shadow: 5px 5px 5px 5px #529411 inset;
+}
+
+#disk5 {
+    background-color: #e0ca4b;
+    width: 13vw;
+    box-shadow: 5px 5px 5px 5px #a99626 inset;
+}
+
+#disk6 {
+    background-color: #d89797;
+    width: 15.5vw;
+    box-shadow: 5px 5px 5px 5px #945555 inset;
+}
+
+#disk7 {
+    background-color: #e04a83;
+    width: 18vw;
+    box-shadow: 5px 5px 5px 5px #771545 inset;
+}
+
+.tower {
+    border-radius: 12px;
+    border-top: black 5px solid;
+    position: relative;
+    height: 100px;
+    width: 342px;
+    list-style-type: none;
+    transform: rotateX(150deg);
+    padding: 0;
+    z-index: 2;
+}
+
+    .tower::before {
+        right: calc(50% - 2.5px);
+        position: absolute;
+        top: 0;
+        width: 5px;
+        height: 320px;
+        background-color: black;
+        content: "";
+        z-index: -10;
+    }
+
+#wrapper_div {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    height: 58vh;
+    align-items: flex-end;
+    margin: auto;
+    position: absolute;
+    top: 4%;
+    right: 13%;
+}
+
+.checkboxIn {
+    background: rgb(255,183,56);
+    width: 1vw;
+    border-radius: 12vw;
+    box-shadow: 1px -3px 9px 3px rgb(197,106,16) inset;
+    height: 2vh;
+}
+
+.checkboxOut {
+    width: 1vw;
+    height: 2vh;
+    position: absolute;
+    right: 2%;
+    border-radius: 9vw;
+    box-shadow: 0px 0px 9px 7px rgb(193, 188, 188);
+}
+
+#section {
+    position: absolute;
+    top: 67%;
+    right: 4%;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 3vw;
+    cursor: help;
+}
+
+.lev {
+    position: absolute;
+    right: 3%;
+    /*font-family: 'Ktav Yad CLM MediumItalic'*/;
+    text-shadow: -1px 1px 6px orange;
+    color: rgb(3,152,159);
+    cursor: help;
+}
+
+.level {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#lev1 {
+    margin: 0vh 3vw 0vh 1vw;
+}
+
+    #lev1:hover {
+        font-size: 4vw;
+    }
+
+#lev2 {
+    margin: 0vh 3vw 0vh 1vw;
+}
+
+    #lev2:hover {
+        font-size: 4vw;
+    }
+
+#lev3 {
+    margin: 0vh 3vw 0vh 1vw;
+}
+
+    #lev3:hover {
+        font-size: 4vw;
+    }
+
+lable {
+    font-size: 8vw;
+    color: rgb(3,152,159);
+    position: absolute;
+    top: 1%;
+    right: 17%;
+    text-shadow: -1px 1px 14px orange;
+    /*font-family: 'Ktav Yad CLM MediumItalic';*/
+}
+
+#instra {
+    font-size: 5vw;
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    color: orange;
+    text-shadow: 2px 2px 4px rgb(3,152,159);
+    display: none;
+    /*font-family: 'Ktav Yad CLM MediumItalic';*/
+}
+
+#ins {
+    direction: rtl;
+    display: none;
+    color: rgb(3,152,159);
+    text-align: center;
+    position: absolute;
+    top: 26%;
+    width: 25vw;
+    left: 2%;
+    font-size: 1.5vw;
+    /*font-family: 'Ktav Yad CLM MediumItalic';*/
+}
+
+#back {
+    position: absolute;
+    bottom: 22%;
+    right: 36%;
+}
+
+#in {
+    position: absolute;
+    bottom: 20.5%;
+    right: 45%;
+}
+
+.pic:hover {
+    cursor: pointer;
+    opacity: 0.6;
+    -webkit-animation: turn linear 0.4s alternate; /* Chrome, Safari, Opera */
+    animation: turn linear 0.4s alternate;
+}
+
+@-webkit-keyframes turn {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(90deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(270deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#close {
+    position: absolute;
+    top: 17%;
+    right: -32%;
+}
+
+.pics:hover {
+    cursor: pointer;
+    opacity: 0.6;
+    -webkit-animation: turn linear 0.4s alternate; /* Chrome, Safari, Opera */
+    animation: turn linear 0.4s alternate;
+}
+
+.show {
+    visibility: visible;
+    -webkit-animation: enterance linear 0.8s alternate forwards; /* Chrome, Safari, Opera */
+    animation: enterance linear 0.8s alternate forwards;
+}
+
+.strip__close {
+    position: absolute;
+    right: 3vw;
+    top: 3vw;
+    opacity: 0;
+    z-index: 10;
+    -webkit-transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    /*cursor: pointer;*/
+    -webkit-transition-delay: 0.5s;
+    transition-delay: 0.5s;
+}
+
+.strip__close--show {
+    opacity: 1;
+}
+#win {
+    display:none;
+    width: 70vw;
+    height: 10vh;
+    position: absolute;
+    top: -444%;
+    right: 2%;
+    font-size: 12vw;
+    z-index: 101;
+    animation: turn2 linear 1s alternate infinite;
+}
+@-webkit-keyframes turn2 {
+    0% {
+        font-size: 11vw;
+        color: #00959c;
+        text-shadow: 2px 10px 21px rgb(255,124,7);
+    }
+
+    25% {
+        font-size: 13vw;
+        color: #00959c;
+        text-shadow: 2px 15px 11px #706a6a;
+    }
+
+    50% {
+        font-size: 15vw;
+        color: #ffa224;
+        text-shadow: 6px 6px 27px #03989f;
+    }
+
+    75% {
+        font-size: 13vw;
+        color: #00959c;
+        text-shadow: 2px 15px 11px #706a6a;
+    }
+
+    100% {
+        font-size: 11vw;
+        color: #00959c;
+        text-shadow: 2px 10px 21px rgb(255,124,7);
+    }
+}
+@media screen and (max-width: 767px) and (min-width: 481px) {
+    .tower::before {
+        height: 117px;
+    }
+
+    #wrapper_div {
+        top: 4%;
+        right: 17%;
+    }
+
+    lable {
+        font-size: 6vw;
+        top: 25%;
+        right: 21%;
+    }
+
+    #back {
+        bottom: 26%;
+        right: 36%;
+        width: 7vw;
+    }
+
+    #in {
+        bottom: 25%;
+        right: 46%;
+        width: 9vw;
+    }
+
+    .checkboxIn {
+        height: 1vh;
+    }
+
+    .checkboxOut {
+        height: 1vh;
+    }
+
+    #section {
+        top: 67%;
+        right: 4%;
+    }
+
+    #close {
+        width: 2vw;
+    }
+
+    #instra {
+        font-size: 4vw;
+        top: 25%;
+    }
+
+    #ins {
+        top: 30%;
+        left: 4%;
+        font-size: 1.8vw;
+    }
+
+    div.button {
+        width: 474px;
+        height: 37px;
+    }
+
+    #btn1 {
+        top: 336px;
+    }
+
+    #btn2 {
+        top: 394px;
+    }
+
+    #btn3 {
+        top: 452px;
+    }
+
+    .link {
+        font-size: 3vw;
+    }
+
+    div.button:hover {
+        width: 300px;
+    }
+}
+    @media screen and (max-width: 1199px) and (min-width: 992px) {
+        lable {
+            font-size: 6vw;
+            top: 9%;
+        }
+
+        .tower::before {
+            height: 213px;
+        }
+
+        #wrapper_div {
+            top: 2%;
+            right: 15%;
+        }
+
+        #close {
+            right: -43%;
+            width: 2vw;
+        }
+
+        div.button {
+            width: 491px;
+            height: 42px;
+        }
+        #win {      
+            top: -410%;
+        }
+            #btn1 {
+            top: 191px;
+        }
+
+        #btn2 {
+            top: 260px;
+        }
+
+        #btn3 {
+            top: 335px;
+        }
+
+        .link {
+            font-size: 2.5vw;
+        }
+    }
+
+    @media screen and (max-width: 480px) and (min-width: 320px) {
+        .tower::before {
+            width: 3px;
+            height: 83px;
+        }
+        #win {
+            top: -266%;
+        }
+            #wrapper_div {
+            top: -1%;
+            right: 10%;
+        }
+        #win {         
+            top: -316%;
+        }
+            #instra {
+            font-size: 5vw;
+            top: 30%;
+            left: 11%;
+        }
+
+        #close {
+            right: -38%;
+            width: 3vw;
+        }
+
+        #ins {
+            top: 32%;
+            left: 4%;
+            font-size: 2.4vw;
+            width: 33vw;
+        }
+
+        lable {
+            font-size: 6vw;
+            top: 23%;
+        }
+
+        .checkboxOut {
+            height: 0.8vh;
+        }
+
+        .checkboxIn {
+            height: 0.8vh;
+        }
+
+        #section {
+            top: 67%;
+            right: 4%;
+        }
+
+        div.button {
+            width: 484px;
+            height: 29px;
+        }
+
+        #back {
+            bottom: 40%;
+            right: 34%;
+            width: 6vw;
+        }
+
+        #in {
+            bottom: 39.5%;
+            right: 42%;
+            width: 8vw;
+        }
+
+        .link {
+            font-size: 4vw;
+        }
+
+        #btn1 {
+            top: 299px;
+        }
+
+        #btn2 {
+            top: 355px;
+        }
+
+        #btn3 {
+            top: 411px;
+        }
+
+        div.button:hover {
+            width: 270px;
+        }
+    }
+
